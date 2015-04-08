@@ -2,6 +2,7 @@
 using System.Collections;
 public class Cage : MonoBehaviour {
 	public AudioClip unlock;
+	public GameObject deathparticles;
 
 	void OnTriggerEnter(Collider co1)
 	{
@@ -10,6 +11,7 @@ public class Cage : MonoBehaviour {
 			var audio = GetComponent<AudioSource> ();
 			audio.PlayOneShot (unlock);
 			Destroy (co1.gameObject);
+			Instantiate(deathparticles,transform.position,Quaternion.identity);
 		}
 
 	}
