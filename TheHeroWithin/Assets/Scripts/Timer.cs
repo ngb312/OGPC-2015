@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour {
 	public Color normalColor;
 	public Color warningColor;
 
+
 	void Update()
 	{
 		if (seconds <= 0) {
@@ -34,7 +35,7 @@ public class Timer : MonoBehaviour {
 	{
 		GUI.skin = skin;
 
-		if (Minutes < 2f) 
+		if (Minutes < 1f) 
 		{
 			skin.GetStyle ("Timer").normal.textColor = warningColor;
 		}

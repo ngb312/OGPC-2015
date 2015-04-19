@@ -11,7 +11,14 @@ public class Cage : MonoBehaviour {
 			var audio = GetComponent<AudioSource> ();
 			audio.PlayOneShot (unlock);
 			Destroy (co1.gameObject);
-			Instantiate(deathparticles,transform.position,Quaternion.identity);
+			Instantiate(deathparticles,transform.position,transform.rotation);
+		}
+		if (co1.gameObject.tag == "Cage1") 
+		{
+			var audio = GetComponent<AudioSource> ();
+			audio.PlayOneShot (unlock);
+			Destroy (co1.gameObject);
+			Instantiate(deathparticles,transform.position,transform.rotation);
 		}
 
 	}

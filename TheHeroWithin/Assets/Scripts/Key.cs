@@ -5,6 +5,7 @@ public class Key : MonoBehaviour {
 	public GameObject GameManager;
 	public GameObject Victim;
 	public GameObject Cage;
+	public GameObject Picture;
 
 	void OnTriggerEnter(Collider co)
 	{
@@ -13,8 +14,7 @@ public class Key : MonoBehaviour {
 			Destroy(co.gameObject);
 			Destroy(Victim);
 			Destroy (Cage);
-			var score = GameManager.GetComponent<Score> ();
-			score.FlagFoundVicitm1();
+			Destroy (Picture);
 		}
 	}
 }
